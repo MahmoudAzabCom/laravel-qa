@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Support\Str;
 class Question extends Model
 {
     //
@@ -11,8 +11,12 @@ class Question extends Model
     public function user()
     {
         # code...
-        return $this->belongTo(User::class);
+        return $this->belongsTo(User::class);
     }
-    $question = Question::find(1);
-    $question -> user -> email;
+    public function setTitleAttribute($value)
+    {
+        $this->attributes['title'] = $value;
+        $this->attributes['slug'] = Str::slug($value);
+    }
+
 }

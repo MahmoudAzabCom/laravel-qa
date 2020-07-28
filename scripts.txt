@@ -1,0 +1,38 @@
+ cd D:\src\exp\laravel-vue\eding
+ laravel new laravel-qa
+ cd laravel-qa
+  git init
+  git add .
+  git commit -m "initial commit"
+  git config --global user.email "mahmoud.azab.com@gmail.com"
+  git config --global user.name "MahmoudAzab-com"
+  git commit -m "initial commit"
+  git remote add origin https://github.com/MahmoudAzab-com/laravel-qa.git
+  git push -u origin master
+  ------------------
+   git status
+   git add .
+   git commit -m "Generate auth scaffolding & install npm packages"
+   git push origin master
+   git branch
+   git checkout -b lesson-2
+   --------------------------
+   git stats
+   git add .
+   git commit -m "Generate Question model via artisan model generator"
+   git push origin lesson-2
+   git checkout master
+   git merge lesson-2
+   git push origin master
+  npm install
+  composer require laravel/ui
+  php artisan ui vue --auth
+   mysql -u root -p  "CREATE DATABASE laravel-qa"
+    code .
+     php artisan migrate
+     php artisan serve
+     php artisan make:model Question -m
+      php artisan migrate
+      php artisan migrate:fresh
+      php artisan migrate:refresh
+       php artisan tinker
