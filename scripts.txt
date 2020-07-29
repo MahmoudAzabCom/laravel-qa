@@ -36,3 +36,8 @@
       php artisan migrate:fresh
       php artisan migrate:refresh
        php artisan tinker
+
+       php artisan make:factory QuestionFactory
+       php artisan migrate:fresh --seed
+       php artisan make:controller QuestionsController --resource --model=Question
+        php artisan vendor:publish --tag=laravel-pagination
